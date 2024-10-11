@@ -25,9 +25,10 @@ let isLight = true;
 console.log(btn);
 btn.addEventListener("click", () => {
     if (isLight) {
-    text.style.setProperty("color", "white");
-    btn.classList.remove("btn-light-model");
-    btn.classList.add("btn-Dark-model");
+      text.style.setProperty("color", "white");
+      btn.classList.replace("btn-light-model", "btn-Dark-model");
+    // btn.classList.remove("btn-light-model");
+    // btn.classList.add("btn-Dark-model");
     btn.textContent = "light";
     root.style.setProperty("--color-white", "#03346E");
     root.style.setProperty("--color-dark-blue-1", "white");
@@ -35,9 +36,10 @@ btn.addEventListener("click", () => {
   } else {
     text.style.setProperty("color", "black");
     btn.textContent = "Dark";
-    console.log("Button clicked!");
-    btn.classList.remove("btn-Dark-model");
-    btn.classList.add("btn-light-model");
+      console.log("Button clicked!");
+      btn.classList.replace("btn-Dark-model","btn-light-model" );
+    // btn.classList.remove("btn-Dark-model");
+    // btn.classList.add("btn-light-model");
     root.style.setProperty("--color-white", "white");
     root.style.setProperty("--color-dark-blue-1", "#03346E");
     isLight = true;

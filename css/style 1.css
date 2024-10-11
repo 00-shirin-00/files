@@ -87,7 +87,7 @@ section#header {
     position: fixed;
     box-shadow: 1px 1px 20px 0px var(--color-gray-3);
     z-index: 1000;
-    position: relative;
+    /* position: relative; */
     h1 {
       width: 20%;
       text-align: center;
@@ -101,9 +101,16 @@ section#header {
         color: var(--color-BurlyWood-1);
       }
     }
+    i.menu-icon {
+      font-size: 3rem;
+      color: var(--color-BurlyWood-1);
+      text-shadow: 1px 1px 6px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
+      display: none;
+    }
 
     ul {
       width: 70%;
+      margin-left: 5px;
       display: flex;
       justify-content: space-evenly;
       font-size: 0.9rem;
@@ -544,3 +551,33 @@ h4::before {
   border: solid 1px black;
   animation: bgColor 5s infinite;
 }
+
+/* ------------------media querie lists>>--------------------- */
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  nav i.menu-icon {
+      display: block!important;
+  }
+  nav{
+    position: fixed!important;
+    top:0;
+    left: 0;
+    width: 100%;
+
+    a{
+      display: block!important;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */

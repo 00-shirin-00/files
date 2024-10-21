@@ -32,6 +32,10 @@
   list-style: none;
   text-decoration: none;
 }
+body{
+  min-width: 700px;
+
+}
 /* ----------------animations >> --------------------------------- */
 @keyframes bgColor {
   0% {
@@ -93,7 +97,7 @@ section#header {
       text-align: center;
       font-size: 2rem;
       font-weight: 900;
-      
+
       a {
         color: var(--color-white-2);
         text-shadow: -2px -1px 0 rgb(0, 0, 0), 1px 1.5px 0 rgb(0, 0, 0);
@@ -102,22 +106,26 @@ section#header {
         color: var(--color-BurlyWood-1);
       }
     }
-    img{
-        width: 40px;
+    img.menu-icon {
+      width: 40px;
       color: var(--color-BurlyWood-1);
       text-shadow: 1px 1px 6px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
       display: none;
-      }
-    i.menu-icon {
+      transition: all 1s;
+    }
+    img.menu-icon:hover{
+     transform: rotate(-180deg);
+    }
+    /* i.menu-icon {
       font-size: 3rem;
       color: var(--color-BurlyWood-1);
       text-shadow: 1px 1px 6px rgb(0, 0, 0), 0px 0px 2px rgb(0, 0, 0);
       display: none;
-    }
+    } */
 
     ul {
       width: 70%;
-      margin-left: 5px;
+      margin-right: 5px;
       display: flex;
       justify-content: space-evenly;
       font-size: 0.9rem;
@@ -140,7 +148,7 @@ section#header {
     }
     h2 {
       font-family: var(--font-family-Nerko-One);
-      font-size: 4rem;
+      font-size: 3rem;
       padding-top: 10rem;
       padding-left: 5rem;
       color: var(--color-white-2);
@@ -154,7 +162,7 @@ section#header {
     p {
       color: var(--color-white-2);
       padding: 1rem 0 0 5rem;
-      width: 50%;
+      width: 500px;
       letter-spacing: 1px;
       word-spacing: 2px;
       line-height: 2rem;
@@ -567,21 +575,54 @@ h4::before {
 /* @media only screen and (min-width: 600px) {...} */
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
+@media only screen and (max-width: 768px) {
+  nav {
+    .menu-icon {
+      display: block !important;
+      position: absolute;
+      top: 20%;
+      right: 20px;
+    }
+ 
+  }
+
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-  nav .menu-icon {
-      display: block!important;
+  nav {
+    li a {
+      font-size: 0.6rem;
+    }
   }
-  nav{
-    position: fixed!important;
-    top:0;
-    left: 0;
-    width: 100%;
-
-    a{
-      display: block!important;
+header{
+  p{
+    font-size: .8rem;
+      line-height: 20px!important;
+width: 400px!important;
+  }
+}
+}
+@media only screen and (max-width: 1030px){
+    header {
+    img {
+      width: 350px!important;
+      height: 500px!important;
+    }}
+}
+@media only screen and (max-width: 1122px) {
+  header {
+    img {
+      width: 500px;
+      height: 600px;
+    }
+    h2 {
+      font-size: 2rem !important;
+      line-height: 60px!important;
+    }
+    p{
+      overflow: hidden;
+      text-overflow: ellipsis!important;
     }
   }
 }

@@ -1,4 +1,14 @@
 "use strict";
+// -----------menu >> ---------------------------
+const menu = document.querySelector("button.input img.menu-icon");
+const ul = document.querySelector("ul");
+menu.addEventListener('click', () => {
+  console.log(menu)
+  // menu.style.transform = "rotate(180deg)";
+
+  ul.classList.toggle("ulClass");
+  // menu.style.transform = "rotate(180deg)";
+})
 
 // -----------slider model >> ---------------------------
 const sliderEl = document.querySelectorAll("#models div");

@@ -70,24 +70,25 @@
   }
 }
 
-/* -----------------header >> --------------------------- */
+/* -----------------header section >> --------------------------- */
 section#header {
   width: 100%;
-  /* height: 43rem; */
+  /*or >> height: 43rem; */
   height: 100vh;
   background-color: var(--color-DarkSlateGrey);
   position: relative;
 
+  /* --------------start navbar------------------------- */
   nav {
     width: 100%;
     height: 6.25rem;
-    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
     box-shadow: 1px 1px 20px 0px var(--color-gray-3);
     z-index: 1000;
+    /* -----------brand name>> ------------------------- */
     h1 {
       width: 20%;
       text-align: center;
@@ -97,9 +98,9 @@ section#header {
       a {
         color: var(--color-white-2);
         text-shadow: -2px -1px 0 rgb(0, 0, 0), 1px 1.5px 0 rgb(0, 0, 0);
-      }
-      span {
-        color: var(--color-BurlyWood-1);
+        span {
+          color: var(--color-BurlyWood-1);
+        }
       }
     }
     /* button.input {
@@ -117,31 +118,16 @@ section#header {
       }
       transition: all 1s;
     } */
-
-    button.input {
-      position: absolute;
-      top: 20%;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: transparent;
-      border: none;
-      img.menu-icon {
-        width: 100%;
-        height: 100%;
-      transition: all 1s;
-      transform: rotate(180deg);
-
-      }
-    }
-    ul {
+    /* -------------------ul in navbar--------------------------- */
+/*  */
+    ul.one {
       width: 70%;
       margin-right: 5px;
       display: flex;
       justify-content: space-evenly;
       font-size: 0.9rem;
       font-weight: 700;
-      transition:cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
 
       a {
         color: var(--color-BurlyWood-1);
@@ -150,7 +136,8 @@ section#header {
         letter-spacing: 1px;
       }
     }
-    .ulClass {
+  /* -----------when clicked flash icon--------------------- */
+    .two {
       width: 100%;
       height: 500px;
       position: fixed;
@@ -159,6 +146,7 @@ section#header {
       left: 0;
       z-index: -10;
       background-color: #030303b6;
+      display: flex;
       flex-direction: column;
       align-items: center;
       backdrop-filter: blur(5px);
@@ -171,8 +159,26 @@ section#header {
         display: block;
       }
     }
+
+    /* ----flash icon------- */
+    img.flash-icon {
+      position: absolute;
+      top: 20%;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      transition: all 1s;
+      transform: rotate(150deg);
+    }
+    /* --------end flash icon---------------------- */
+
+  
   }
+
+  /* ---------end of navbar --------------------------------- */
+/* ---------------header >>-------------------- */
   header {
+    /* ------------building pic >>--------------------------- */
     img {
       width: 450px;
       height: 650px;
@@ -180,6 +186,8 @@ section#header {
       right: 0;
       bottom: 0;
     }
+
+    /*------------------- big text in head >>---------------------- */
     h2 {
       font-family: var(--font-family-Nerko-One);
       font-size: 3rem;
@@ -202,7 +210,7 @@ section#header {
       line-height: 2rem;
     }
 
-    button {
+    button.Discover-btn1 {
       width: 15rem;
       height: 3.5rem;
       margin: 1rem 0 0 5rem;
@@ -211,12 +219,6 @@ section#header {
       font-size: 1rem;
       font-weight: 700;
       color: var(--color-white-2);
-
-      /* background: linear-gradient(
-        90deg,
-        rgba(10, 113, 173, 0.438) 0%,
-        rgba(3, 42, 63, 0.457) 99%
-      ); */
       background: linear-gradient(
         90deg,
         var(--color-DarkSlateGrey-Darker) 0%,
@@ -229,7 +231,8 @@ section#header {
       border: none;
       text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0);
     }
-    .button {
+    /* ------------- */
+    .Discover-btn2 {
       width: 15rem;
       height: 3.5rem;
       margin: 1rem 0 0 5rem;
@@ -240,21 +243,17 @@ section#header {
       font-weight: 700;
       background: linear-gradient(
         269deg,
-        rgba(10, 114, 173, 1) 0%,
-        rgb(3, 42, 63) 99%
+        #3f8680b8 0%,
+        rgb(3, 59, 63) 99%
       );
-
       transition: all 0.3s;
       border-radius: 10px;
       border: none;
-      box-shadow: inset 7px 7px 12px 0px #002141, inset -2px -2px 1pc #98c7fa;
+      box-shadow: inset 7px 7px 12px 0px #012b29, inset -2px -2px 1pc #98f7fa;
     }
   }
 }
-/* button.input{
-  width: 80px;
-  height: 80px;
-} */
+
 /* --------------------compaines >>------------------------- */
 
 section#compaines {
@@ -443,7 +442,7 @@ section#Make {
         font-family: var(--font-family-Poppins);
         font-size: 0.8rem;
         letter-spacing: 1px;
-        text-align: justify;
+        text-align: center;
       }
     }
   }
@@ -559,9 +558,6 @@ footer {
       display: block;
     }
   }
-  /* div {
-    border: 2px solid black;
-  } */
 }
 h4 {
   font-family: var(--font-family-Nerko-One);
@@ -583,23 +579,16 @@ h4::before {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  /* header>> */
-  img.menu-icon {
-    display: block;
-  }
+
   nav h1 {
     position: absolute;
     top: 15%;
     left: 10px;
   }
-  ul a {
-    display: none;
-  }
+
 
   header {
-    h2 {
-      padding-left: 3rem !important;
-    }
+   
     p {
       padding-left: 3rem !important;
       margin-bottom: 50px;
@@ -680,12 +669,13 @@ h4::before {
     padding: 3rem 1.5rem;
   }
 }
-@media only screen and (min-width: 769px){
-    img.menu-icon {
-    display: none!important;
-  }
-}
 
+/* @media only screen and (min-width: 769px) {
+  img.menu-icon {
+    display: none !important;
+  }
+} */
+/* ---------------------------------------- */
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   nav {
@@ -701,6 +691,7 @@ h4::before {
     }
   }
 }
+/* ---------------------------------------- */
 @media only screen and (max-width: 1030px) {
   header {
     img {
@@ -709,6 +700,7 @@ h4::before {
     }
   }
 }
+/* ---------------------------------- */
 @media only screen and (max-width: 1122px) {
   header {
     img {
@@ -716,8 +708,8 @@ h4::before {
       height: 600px;
     }
     h2 {
-      font-size: 2rem !important;
-      line-height: 50px !important;
+      font-size: 2rem;
+      line-height: 50px ;
     }
     p {
       overflow: hidden;
